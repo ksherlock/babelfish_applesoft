@@ -1,0 +1,10 @@
+creating the applesoft translator requires:
+ORCA/C (used ONLY to facilitate data creation)
+ORCA/M
+REZ
+
+It should be VERY trivial to convert this into an Integer Basic importer.
+Importing GSoft Basic files is slightly more complex, but not much.  See
+the GSoft book Appendices.
+
+the "install" script will compile & install translator.

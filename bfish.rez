@@ -1,0 +1,44 @@
+#define rTrData	$5472
+
+// Flags
+#define bf320	$0001
+#define bf640	$0002
+#define bfCanImport	$0001
+#define bfCanExport	$0001
+#define bfImportOptions	$0002
+#define bfExportOptions	$0002
+
+// DataKinds
+#define bffNoData	$00
+#define bggText		$01
+
+//Translator IDs
+#define TrVersion	$0001	//rVersion
+#define TrAbout		$0001	//rComment
+#define TrCantLauch	$0002
+
+#define TrData		$0001	//rTrData
+
+#define TrInit		$0001	//rCodeResource
+#define TrImportOptions	$0002	//rCodeResource
+#define TrExportOptions	$0003
+#define TrFilter	$0004
+
+#define TrImportInfo	$0002	//rText
+#define	TrExportInfo	$0003	//rText
+
+type rTrData
+{
+	_mybase_ integer = 0;	//revision
+	_mybase_ integer;	//general flags
+	_mybase_ integer;	//Import Flags
+	array[8]
+	{
+		hex byte;	//Import Kinds
+	};
+	_mybase_ integer;	//Export Flags
+	array[8]
+	{
+		hex byte;	//Export Kinds
+	};
+};                                             

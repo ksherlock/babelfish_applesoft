@@ -1,0 +1,7 @@
+compile token.c keep=token
+compile init.asm keep=init
+link init token keep=init
+cmpl filter.asm keep=filter
+compile asoft.rez keep=AppleSoft
+filetype AppleSoft $be $4003
+copy -C AppleSoft *:system:SHS.Babelfish:

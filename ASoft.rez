@@ -1,0 +1,34 @@
+#include "types.rez"
+#include "bfish.rez"
+
+
+
+resource rVersion(TrVersion)
+{
+	{1, 0, 0, release, 0},
+	$0000,
+	"AppleSoft Translator",
+	"by Kelvin Sherlock\nCopyright 1998 Kelvin Sherlock"
+};
+resource rComment(TrAbout)
+{
+	"AppleSoft BASIC BabelFish translator"
+};
+
+resource rTrData(TrData)
+{
+	bf320+bf640,
+	bfCanImport,
+	{1,0,0,0,0,0,0,0},
+	0,
+	{0,0,0,0,0,0,0,0}
+};
+
+read rCodeResource(TrFilter, locked, convert) "Filter";
+read rCodeResource(TrInit, locked, convert) "Init";
+           
+resource rText(TrImportInfo)
+{
+	"Import AppleSoft BASIC files.\n\n"
+        "by Kelvin W. Sherlock."
+};

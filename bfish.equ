@@ -1,0 +1,43 @@
+offset_ParmCount	gequ $00
+offset_Status		gequ $02
+offset_MiscFlags	gequ $04
+offset_DataKinds	gequ $06
+offset_TransNum	gequ $0e
+offset_UserID		gequ $10
+offset_ProgressAction	gequ $12
+offset_FullTherm	gequ $14
+offset_CurrentTherm	gequ $16
+offset_MsgPtr		gequ $18
+offset_DataRecordPtr	gequ $1c
+offset_FilePathPtr	gequ $20
+offset_FileNamePtr	gequ $24
+
+
+offset_Text_ActionCode	gequ $02
+offset_Text_Length	gequ $06
+offset_Text_Ptr	gequ $0A
+offset_Text_Hnd	gequ $0E
+offset_Text_FamilyID	gequ $12
+offset_Text_FontSize	gequ $14
+offset_Text_FontStyle	gequ $16
+offset_Text_ForeColor	gequ $18
+offset_Text_BackColor	gequ $1A
+
+TrStartUp	gequ $9101
+TrShutDown	gequ $9102
+TrRead		gequ $9103
+
+
+BFProgress	gequ $9018
+
+
+
+bffText	gequ 1
+
+bfContinue	gequ 0
+bfDone		gequ $8000
+bfUserAbort	gequ $8001
+bfBadFileErr	gequ $8002
+bfReadErr	gequ $8003
+bfWriteErr	gequ $8004
+bfMemErr		gequ $8005
